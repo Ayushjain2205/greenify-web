@@ -1,12 +1,41 @@
-import Image from "next/image";
+import { Player } from "@lottiefiles/react-lottie-player";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Greenify web</h1>
+    <main className="flex min-h-screen flex-col items-center p-12">
+      <div className="flex w-full flex-row justify-around">
+        <Player
+          autoplay
+          loop
+          src="https://assets4.lottiefiles.com/packages/lf20_jggbnfb8.json"
+          style={{ height: "600px", width: "100%" }}
+        ></Player>
+        <Player
+          autoplay
+          loop
+          src="https://assets10.lottiefiles.com/packages/lf20_aom4gvbm.json"
+          style={{ height: "600px", width: "100%" }}
+        ></Player>
+      </div>
+      <h1 className="w-2/3 text-4xl text-primary italic">
+        Transform Your Website into an{" "}
+        <span className="font-bold underline text-6xl">
+          Eco-Friendly Powerhouse
+        </span>{" "}
+      </h1>
+      <br />
+      <h1 className="w-2/3 text-4xl text-primary italic">
+        Unleash the Green Potential of Your Web Pages with Greenify-Web!
+      </h1>
+      <Link href="/find">
+        <button className="btn btn-primary btn-outline btn-wide mt-4">
+          Let's go!
+        </button>
+      </Link>
     </main>
   );
 }
