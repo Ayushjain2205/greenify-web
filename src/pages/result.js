@@ -3,6 +3,7 @@ import Comparision from "../components/Stats/Comparision";
 import Carbon from "../components/Stats/Carbon";
 import Weight from "../components/Stats/Weight";
 import Tree from "../components/Stats/Tree";
+import Link from "next/link";
 
 const result = () => {
   return (
@@ -35,6 +36,11 @@ const result = () => {
           4
         </a>
       </div>
+      <Link href="/optimize">
+        <button className="btn btn-primary btn-outline btn-block mt-4">
+          Help me optimize my website!
+        </button>
+      </Link>
     </div>
   );
 };
