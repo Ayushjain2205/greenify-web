@@ -1,6 +1,6 @@
 import React from "react";
 
-const TipCard = ({ name, image, categories, description, modalData }) => {
+const TipCard = ({ name, image, categories, description, modalData, id }) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
@@ -18,13 +18,16 @@ const TipCard = ({ name, image, categories, description, modalData }) => {
           ))}
         </div>
         <div className="card-actions justify-end">
-          <label htmlFor="my-modal-4" className="btn btn-block btn-ghost mt-4">
+          <label
+            htmlFor={`my-modal-${id}`}
+            className="btn btn-block btn-ghost mt-4"
+          >
             More details
           </label>
         </div>
       </div>
-      <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-      <label htmlFor="my-modal-4" className="modal cursor-pointer">
+      <input type="checkbox" id={`my-modal-${id}`} className="modal-toggle" />
+      <label htmlFor={`my-modal-${id}`} className="modal cursor-pointer">
         <label className="modal-box relative" htmlFor="">
           <h3 className="text-lg font-bold">{modalData.title}</h3>
           <p className="py-4">{modalData.text}</p>
@@ -34,10 +37,17 @@ const TipCard = ({ name, image, categories, description, modalData }) => {
               <li className="py-2 italic">{point}</li>
             ))}
           </ul>
+          <br />
+          <h6 className="text-l font-bold">Reference links</h6>
           <ul>
             {modalData.links.map((link) => (
-              <a href={link} className="py-2 italic btn btn-link">
-                Addtional Reading
+              <a
+                href={link}
+                target="_blank"
+                className="py-2 italic btn btn-link"
+              >
+                Addtional Reading &nbsp;
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             ))}
           </ul>

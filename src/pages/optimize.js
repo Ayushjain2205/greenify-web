@@ -13,6 +13,7 @@ const optimize = () => {
             description={item.description}
             categories={item.categories}
             modalData={item.modalData}
+            id={item.id}
           />
         ))}
       </div>
