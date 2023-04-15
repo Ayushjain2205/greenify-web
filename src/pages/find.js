@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import Link from "next/link";
 
 const find = () => {
   const [searchString, setSearchString] = useState([]);
@@ -30,12 +31,14 @@ const find = () => {
           className="input input-bordered input-primary w-full"
           onChange={(e) => setSearchString(e.target.value)}
         />
-        <button
-          className="btn text-3xl text-primary btn-square btn-ghost"
-          onClick={() => fetchData()}
-        >
-          <i class="fa-brands fa-searchengin"></i>
-        </button>
+        <Link href="/result">
+          <button
+            className="btn text-3xl text-primary btn-square btn-ghost"
+            onClick={() => fetchData()}
+          >
+            <i class="fa-brands fa-searchengin"></i>
+          </button>
+        </Link>
       </div>
     </div>
   );
