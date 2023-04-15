@@ -12,7 +12,11 @@ const Comparision = () => {
       ></Player>
       <h1 className="w-2/3 text-4xl text-primary italic">
         {" "}
-        Hurrah! This web page is cleaner than 83 % of web pages tested
+        This web page is cleaner than
+        <span className="badge badge-secondary badge-lg text-6xl text-primary">
+          83 %
+        </span>{" "}
+        of web pages tested!
       </h1>
     </div>
   );

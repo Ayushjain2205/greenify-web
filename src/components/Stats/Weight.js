@@ -13,21 +13,26 @@ const Weight = () => {
         ></Player>
         <h1 className="w-2/3 text-4xl text-primary italic">
           {" "}
-          16.91kg of CO2 equivalent. The same weight as 0.11 sumo wrestlers and
-          as much CO2 as boiling water for 2,292 cups of tea
+          <span className="badge badge-secondary badge-lg text-6xl text-primary mt-2">
+            16.91kg of CO2{" "}
+          </span>
+          equivalent. As much CO2 as boiling water for 2,292 cups of tea
         </h1>
       </div>
       <div className="flex flex-row gap-5 items-center">
+        <h1 className="w-2/3 text-4xl text-primary italic">
+          {" "}
+          <span className="badge badge-secondary badge-lg text-6xl text-primary mt-2">
+            18 billion bubbles{" "}
+          </span>{" "}
+          Woah, that’s a lot of bubbles!
+        </h1>
         <Player
           autoplay
           loop
           src="https://assets10.lottiefiles.com/packages/lf20_fakgwenv.json"
           style={{ height: "300px", width: "100%" }}
         ></Player>
-        <h1 className="w-2/3 text-4xl text-primary italic">
-          {" "}
-          18 billion bubbles Woah, that’s a lot of bubbles!
-        </h1>
       </div>
     </div>
   );

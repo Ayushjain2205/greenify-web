@@ -13,22 +13,30 @@ const Tree = () => {
         ></Player>
         <h1 className="w-2/3 text-4xl text-primary italic">
           {" "}
-          1 tree This web page emits the amount of carbon that 1 tree absorbs in
-          a year.
+          This web page emits the amount of carbon that{" "}
+          <span className="badge badge-secondary badge-lg text-6xl text-primary mt-2">
+            1 tree{" "}
+          </span>{" "}
+          absorbs in a year.
         </h1>
       </div>
       <div className="flex flex-row gap-5 items-center">
+        <h1 className="w-2/3 text-4xl text-primary italic">
+          {" "}
+          <span className="badge badge-secondary badge-lg text-6xl text-primary mt-2">
+            44kWh{" "}
+          </span>{" "}
+          of energy That’s enough electricity to drive an electric car{" "}
+          <span className="badge badge-secondary badge-lg text-6xl text-primary mt-2">
+            282km.
+          </span>
+        </h1>
         <Player
           autoplay
           loop
           src="https://assets2.lottiefiles.com/packages/lf20_h03qgmzg.json"
           style={{ height: "300px", width: "100%" }}
         ></Player>
-        <h1 className="w-2/3 text-4xl text-primary italic">
-          {" "}
-          44kWh of energy That’s enough electricity to drive an electric car
-          282km.
-        </h1>
       </div>
     </div>
   );
