@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../utils/data";
 import TipCard from "../components/TipCard";
+import Link from "next/link";
 
 const optimize = () => {
   return (
@@ -17,6 +18,11 @@ const optimize = () => {
           />
         ))}
       </div>
+      <Link href="/offset">
+        <button className="btn btn-primary btn-outline btn-block mt-8">
+          Offset Carbon Footprint
+        </button>
+      </Link>
     </div>
   );
 };
